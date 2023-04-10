@@ -1,0 +1,24 @@
+/* 로그인 페이지!! */
+.left-box {
+  background-color: #fff;
+  height: 100%;
+  width: 35%;
+  float: left;
+  display: block;
+}
+.left-box div {
+  margin-top: 366px;
+  margin-left: 120px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+}
+.right-box {
+  display: block;
+  background-color: #838383;
+  height: 100%;
+  width: 65%;
+  float: right;
+}
