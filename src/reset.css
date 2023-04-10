@@ -1,0 +1,212 @@
+@import url("https://webfontworld.github.io/pretendard/Pretendard.css");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font-family: "Pretendard";
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+    font-family: "Pretendard";
+}
+
+:root {
+    --positive-blue:#2E79FA;
+    --negative-red:#F63F3F;
+    --white: #FFFFFF;
+
+    --angel-text-black: #070707;
+    --angel-subtitle: #949494;
+    --angel-input-info-text: #B7B7B7;
+    --angel-input-innertext: #D6D6D6;
+    --angel-content-border: #E3E3E3;
+    --angel-header-toggle-active: #F4F4F4;
+    --angel-background: #FCFCFC;
+
+    --devil-header-background:#2F3035;
+    --devil-background: #3E3E42;
+    --devil-content-background: #4E4E53;
+    --devil-content-border: #5F5F65;
+    --devil-subtitle: #7E7E86;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+}
+
+button{
+    background: inherit ;
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer
+}
+
+button {
+    color: #949494;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    gap: 10px;
+
+    left: calc(50% - 94px/2 + 104.5px);
+    top: calc(50% - 39px/2 - 318px);
+
+    background: #D6D6D6;
+    border-radius: 6px;
+}
+
+.btn-active{
+    color: white;
+    background:var(--positive-blue);
+}
+
+.btn-negative{
+    color: var(--negative-red);
+    background-color: #ffffff00;
+    border: 1px solid var(--negative-red);
+}
