@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import axiosPost from "../common/api";
 
 function LoginPage() {
   const {
@@ -12,6 +13,24 @@ function LoginPage() {
 
   const onSubmit = (data) => {
     console.log(data);
+    let jsonData = {
+      userId: data.userId,
+      password: data.userPwd,
+    };
+    axiosPost("users/login", {
+      userId: data.userId,
+      password: data.userPwd,
+    }).then((res) => {
+      console.log("res", res);
+    });
+    // axios
+    //   .post(process.env.REACT_APP_API_URL + "users/login", {
+    //     userId: data.userId,
+    //     password: data.userPwd,
+    //   })
+    //   .then((res) => {
+    //     console.log(res.data);
+    //   });
   };
   const onError = (data) => {
     console.log(data);
@@ -28,15 +47,10 @@ function LoginPage() {
             <ul>
               <li>
                 <label>아이디</label>
-                <input
-                  type="text"
-                  name="userEmail"
-                  placeholder="아이디를 입력해주세요."
-                  {...register("userEmail", { required: true, pattern: "[a-z0-9]+@[a-z]+.[a-z]{2,3}" })}
-                />
+                <input type="text" name="userEmail" placeholder="아이디를 입력해주세요." {...register("userId", { required: true, minLength: 6 })} />
                 {/* <span>이메일을 입력하여 주세요.</span> */}
-                {errors.userEmail && errors.userEmail.type === "required" && <span>이메일을 입력하여 주세요.</span>}
-                {errors.userEmail && errors.userEmail.type === "pattern" && <span>옳은 이메일 형식이 아닙니다.</span>}
+                {errors.userId && errors.userId.type === "required" && <span>아이디를 입력하여 주세요.</span>}
+                {errors.userId && errors.userId.type === "minLength" && <span>6자리 이상 입력하여 주세요.</span>}
               </li>
               <li>
                 <label>
