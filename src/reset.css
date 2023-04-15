@@ -131,6 +131,9 @@ html {
 }
 
 :root {
+    --basic-letter-spacing: -0.025em;
+    --main-content-line-height: 130%;
+
     --positive-blue:#2E79FA;
     --negative-red:#F63F3F;
     --white: #FFFFFF;
@@ -150,12 +153,20 @@ html {
     --devil-subtitle: #7E7E86;
 }
 
+.positive{
+  color: var(--positive-blue);
+}
+
+.negative{
+  color: var(--negative-red);
+}
+
 h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-    letter-spacing: -0.02em;
+    letter-spacing: var(--basic-letter-spacing);
 }
 
 h2 {
@@ -163,7 +174,7 @@ h2 {
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
-    letter-spacing: -0.02em;
+    letter-spacing: var(--basic-letter-spacing);
 }
 
 h3 {
@@ -171,11 +182,45 @@ h3 {
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    letter-spacing: -0.02em;
+    letter-spacing: var(--basic-letter-spacing);
+}
+
+label {
+  font-size: 16px;
+  font-style: 600;
+  letter-spacing: var(--basic-letter-spacing);
+}
+
+.input-error-message{
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: var(--basic-letter-spacing);
+}
+
+.main-author {
+  color: var(--angel-text-black);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: var(--basic-letter-spacing);
+}
+
+.main-content {
+  color: var(--angel-text-black);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: var(--basic-letter-spacing);
+  line-height: var(--main-content-line-height);
+}
+
+.angel-subtitle {
+  color: var(--angel-subtitle);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: var(--basic-letter-spacing);
 }
 
 button{
-    background: inherit ;
+    background: inherit;
     border:none;
     box-shadow:none;
     border-radius:0;
@@ -210,3 +255,4 @@ button {
     background-color: #ffffff00;
     border: 1px solid var(--negative-red);
 }
+
