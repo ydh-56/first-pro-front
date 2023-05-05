@@ -1,8 +1,14 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axiosPost from "../common/api";
+import { setCookie } from "../common/Cookies";
+import { useDispatch } from "react-redux";
+import { setLogin } from "../redux/store/userSlice";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -17,6 +23,13 @@ function LoginPage() {
       password: data.userPwd,
     }).then((res) => {
       console.log("res", res);
+      if (res?.data?.result === "success") {
+        setCookie("token", res.data.data.token, { maxAge: 60 * 60 * 1 });
+        dispatch(setLogin(res.data.data));
+        navigate("/");
+      } else {
+        alert("로그인에 실패하였습니다.");
+      }
     });
   };
   const onError = (data) => {
