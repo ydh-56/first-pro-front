@@ -9,6 +9,7 @@ import ProtectedRoutes from "./routes/ProtectedRoutes";
 // import "./App.css";
 import "./style.css";
 import "./reset.css";
+import Header from "pages/Header";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,19 +35,20 @@ function App() {
   return (
     <>
       <div className="app">
+        <Header></Header>
         <Routes>
           {/* 로그인 안해야 접근가능 */}
-          <Route element={<ProtectedRoutes isLoggedIn={false} />}>
+          {/* <Route element={<ProtectedRoutes isLoggedIn={false} />}> */}
             <Route path="/login" element={<LoginPage />} />
             <Route path="/join" element={<JoinPage />} />
-          </Route>
+          {/* </Route> */}
           {/* 로그인 해야 접근가능 */}
-          <Route element={<ProtectedRoutes isLoggedIn={true} />}>
+          {/* <Route element={<ProtectedRoutes isLoggedIn={true} />}> */}
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/" element={<MainPage />} />
             <Route path="/engel" element={<GoodLife />} />
             <Route path="/devil" element={<BadLife />} />
-          </Route>
+          {/* </Route> */}
         </Routes>
       </div>
     </>
